@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #1f6bd5;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.App-logo {
+  border-radius: 10px;
+  height: 100px;
+}
+
+/* styles.css */
+
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px !important;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 30px;
+  /* padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 7%; */
+}
+
+.category-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.category-card h3 {
+  margin-top: 0;
+}
+
+.category-card p {
+  margin-bottom: 0;
+}
