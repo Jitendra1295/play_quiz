@@ -21,6 +21,18 @@ const TakeQuiz = () => {
             });
     }, [quizId]);
 
+    useEffect(() => {
+        const preventCopy = (event) => {
+            // Prevent copying text
+            event.preventDefault();
+            // Optionally, you can provide a custom message to the user
+            alert('Copying text is not allowed.');
+        };
+        document.addEventListener('copy', preventCopy);
+        return () => {
+            document.removeEventListener('copy', preventCopy);
+        };
+    }, []);
     const handleNext = () => {
         if (index < quizQuestions.length - 1) {
             setIndex(index + 1);
@@ -31,12 +43,6 @@ const TakeQuiz = () => {
         if (index > 0) {
             setIndex(index - 1);
         }
-    };
-
-    const isNextDisabled = () => {
-        // Check if the user has selected an answer for the current question
-        console.log("isNextDisabled:", userAnswers[index] === '', index, userAnswers);
-        return userAnswers[index] === '';
     };
 
     const handleSubmit = () => {
