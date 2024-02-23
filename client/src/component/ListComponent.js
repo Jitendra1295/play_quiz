@@ -7,7 +7,7 @@ const ListComponent = () => {
 
     const [categories, setCategories] = useState(0);
     useEffect(() => {
-        axios.get('http://localhost:5000/api/quiz/category')
+        axios.get('https://play-quiz-server.vercel.app/api/quiz/category')
             .then(response => {
                 console.log("category:", response.data);
                 setCategories(response.data);

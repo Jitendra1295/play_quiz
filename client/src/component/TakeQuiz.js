@@ -11,7 +11,7 @@ const TakeQuiz = () => {
     const { quizId } = useParams();
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/quiz/questions/${quizId}`)
+        axios.get(`https://play-quiz-server.vercel.app/api/quiz/questions/${quizId}`)
             .then(response => {
                 console.log("quiz questions:", response.data[0]);
                 setQuizQuestions(response.data[0].questions);
