@@ -9,8 +9,8 @@ const ListComponent = () => {
     useEffect(() => {
         axios.get('http://localhost:5000/api/quiz/category')
             .then(response => {
-                console.log("category:", response.data[0].quiz);
-                setCategories(response.data[0].quiz);
+                console.log("category:", response.data);
+                setCategories(response.data);
             })
             .catch(error => {
                 console.error('Error fetching quiz data:', error);
