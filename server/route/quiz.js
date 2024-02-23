@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const fs = require('fs');
 // const path = require('path');
-const { Quiz } = require("../module/quizModel")
 const quizData = require("../data/Quiz")
 
 router.get('/category', async (req, res) => {
