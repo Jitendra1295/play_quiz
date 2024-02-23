@@ -16,7 +16,11 @@ mongoose.connect("mongodb+srv://pateljitendra055:NJUWfj8Ix0Zl3VsF@mongocluster.3
 app.use(cors());
 app.use(express.json())
 
-app.use('/api/quiz', quizRoute);;
+app.use('/api/quiz', quizRoute);
+
+app.get('/', (req, res) => {
+    res.send("welcome")
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
